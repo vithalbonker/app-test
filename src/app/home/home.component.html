@@ -1,0 +1,47 @@
+<p>
+  {{homeTitle}}
+</p>
+<ng-content></ng-content>
+
+<input [value]="myString" />
+<input [required] = "myBoolean" />
+
+<input value="{{myString}}" />
+<input required = "{{myBoolean}}" />
+
+<br>
+<br>
+<br>
+
+<button (click)="alertMe()">Click Me</button>
+
+<br>
+<br>
+<br>
+
+<button (click)="alertMe2('I like event binding')">Click 2</button>
+
+
+<br>
+<br>
+<br>
+
+<input [(ngModel)]="ninja.name" />
+<input [(ngModel)]="ninja.belt" />
+<br>
+<br>
+<label>Name:</label>
+<p>{{ninja.name}}</p>
+
+<br>
+<label>Belt:</label>
+<p>{{ninja.belt}}</p>
+
+<br>
+<br>
+<br>
+
+<p>{{ninja1.name}}</p>
+<p>{{ninja1.belt}}</p>
+
+<button (click)="fireYellEvent($event)">Hit me!!</button>
