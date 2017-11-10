@@ -1,10 +1,13 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { LoggingService} from '../logging.service';
 
 @Component({
   inputs: ['ninja1'],
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  providers:[LoggingService]
+
 })
 export class HomeComponent implements OnInit {
 
@@ -19,7 +22,13 @@ export class HomeComponent implements OnInit {
    belt: "Black"
  };
 
-  constructor() { }
+  constructor(private logger: LoggingService) {
+
+  }
+
+ logIt(){
+   this.logger.log();
+ }
 
   ngOnInit() {
   }
